@@ -1,0 +1,48 @@
+{
+  "name": "@hubai/brain-sdk",
+  "version": "1.0.4",
+  "description": "Brain SDK for HubAI app",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gethubai/brain-sdk.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --module commonjs"
+  },
+  "author": {
+    "name": "Matheus Diniz",
+    "email": "contact@hubai.app",
+    "url": "https://github.com/mtsdnz"
+  },
+  "keywords": [
+    "hubai",
+    "brain-sdk",
+    "brain",
+    "hub ai",
+    "brainsdk"
+  ],
+  "bugs": {
+    "url": "https://github.com/gethubai/brain-sdk/issues"
+  },
+  "homepage": "https://github.com/gethubai/brain-sdk#readme",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.8.7",
+    "typedoc": "^0.25.1",
+    "typedoc-plugin-markdown": "^3.16.0",
+    "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "tslib": "^2.5.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
