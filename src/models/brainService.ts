@@ -1,33 +1,36 @@
+import { Stream } from 'stream';
 import { BrainSettingsValidationResult } from './brainSettings';
 
 export type BrainPromptResponse = {
   result: string;
   validationResult: BrainSettingsValidationResult;
-  files?: ResponseFile[];
+  attachments?: ResponseFile[];
 };
 
-export type FileType = "image" | "video" | "audio" | "document" | "other";
+export type FileType = 'image' | 'video' | 'audio' | 'document' | 'other';
 
 export type ResponseFile = {
-  data: Buffer;
+  data: Buffer | string; // url, base64 encoded, or binary
   mimeType: string;
   fileType: FileType;
-}
+  caption?: string;
+  fileName?: string;
+};
 
 export type FileAttachment = {
-  data: Buffer;
+  id?: string;
   path: string;
   mimeType: string;
   size: number;
-  originalName: string;
-}
+  originalFileName?: string;
+};
 
 export type UserRole = 'user' | 'brain' | 'system';
 
 export interface IBrainPromptContext<TPromptSettings> {
   // message id
   id: string;
-  chatId: string;
+  conversationId?: string;
   senderId: string;
   settings?: TPromptSettings;
   [key: string]: any;
@@ -42,7 +45,6 @@ export interface TextBrainPrompt {
   attachments?: FileAttachment[];
 }
 
-
 export interface ITextBrainService<TSettings> extends IBrainService {
   sendTextPrompt(
     prompts: TextBrainPrompt[],
@@ -50,11 +52,14 @@ export interface ITextBrainService<TSettings> extends IBrainService {
   ): Promise<BrainPromptResponse>;
 }
 
-export interface ImageGenerationBrainPrompt extends TextBrainPrompt {}
+export interface ImageGenerationBrainPrompt extends TextBrainPrompt {
+  // The type of response we expect from the brain
+  expectedResponseType: 'base64' | 'url' | 'binary';
+}
 
 export interface IImageGenerationBrainService<TSettings> extends IBrainService {
   generateImage(
-    prompt: ImageGenerationBrainPrompt,
+    prompts: ImageGenerationBrainPrompt[],
     context: IBrainPromptContext<TSettings>
   ): Promise<BrainPromptResponse>;
 }
@@ -63,7 +68,6 @@ export type LocalAudioPrompt = {
   audioFilePath: string;
   language: string;
 };
-
 
 export interface IAudioTranscriberBrainService<TSettings>
   extends IBrainService {

@@ -1,6 +1,6 @@
 {
   "name": "@hubai/brain-sdk",
-  "version": "1.0.4",
+  "version": "1.0.8",
   "description": "Brain SDK for HubAI app",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

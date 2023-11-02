@@ -6,13 +6,16 @@ import {
   TextBrainPrompt,
   IAudioTranscriberBrainService,
   LocalAudioPrompt,
+  IImageGenerationBrainService,
+  ImageGenerationBrainPrompt,
 } from '../models/brainService';
 
 export class BrainServiceSelfHosted
   implements
     IBrainService,
     ITextBrainService<any>,
-    IAudioTranscriberBrainService<any>
+    IAudioTranscriberBrainService<any>,
+    IImageGenerationBrainService<any>
 {
   constructor(private readonly serverUrl: string) {}
 
@@ -31,6 +34,17 @@ export class BrainServiceSelfHosted
     context: IBrainPromptContext<any>
   ): Promise<BrainPromptResponse> {
     const res = await this.post<BrainPromptResponse>('/api/textPrompt', {
+      prompts,
+      context,
+    });
+    return res;
+  }
+
+  async generateImage(
+    prompts: ImageGenerationBrainPrompt[],
+    context: IBrainPromptContext<any>
+  ): Promise<BrainPromptResponse> {
+    const res = await this.post<BrainPromptResponse>('/api/imageGeneration', {
       prompts,
       context,
     });
