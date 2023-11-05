@@ -1,6 +1,6 @@
-[@hubai/brain-sdk](../README.md) / [Exports](../modules.md) / BrainSettingsValidationResult
-
 # Class: BrainSettingsValidationResult
+
+The result of validating the brain settings and prompt
 
 ## Table of contents
 
@@ -31,7 +31,7 @@
 
 #### Defined in
 
-models/brainSettings.ts:21
+[models/brainSettings.ts:51](https://github.com/gethubai/brain-sdk/blob/eb59de1/src/models/brainSettings.ts#L51)
 
 ## Properties
 
@@ -39,9 +39,11 @@ models/brainSettings.ts:21
 
 • **errors**: `string`[]
 
+The list of errors
+
 #### Defined in
 
-models/brainSettings.ts:15
+[models/brainSettings.ts:42](https://github.com/gethubai/brain-sdk/blob/eb59de1/src/models/brainSettings.ts#L42)
 
 ## Accessors
 
@@ -49,13 +51,15 @@ models/brainSettings.ts:15
 
 • `get` **success**(): `boolean`
 
+Whether the validation was successful or not
+
 #### Returns
 
 `boolean`
 
 #### Defined in
 
-models/brainSettings.ts:17
+[models/brainSettings.ts:47](https://github.com/gethubai/brain-sdk/blob/eb59de1/src/models/brainSettings.ts#L47)
 
 ## Methods
 
@@ -63,19 +67,23 @@ models/brainSettings.ts:17
 
 ▸ **addError**(`error`): [`BrainSettingsValidationResult`](BrainSettingsValidationResult.md)
 
+Add an error
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `error` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `error` | `string` | The error message |
 
 #### Returns
 
 [`BrainSettingsValidationResult`](BrainSettingsValidationResult.md)
 
+Itself
+
 #### Defined in
 
-models/brainSettings.ts:33
+[models/brainSettings.ts:74](https://github.com/gethubai/brain-sdk/blob/eb59de1/src/models/brainSettings.ts#L74)
 
 ___
 
@@ -83,20 +91,24 @@ ___
 
 ▸ **addFieldError**(`fieldName`, `error`): [`BrainSettingsValidationResult`](BrainSettingsValidationResult.md)
 
+Add a field error
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `fieldName` | `string` |
-| `error` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `fieldName` | `string` | Name of the field or setting that is invalid |
+| `error` | `string` | The error message |
 
 #### Returns
 
 [`BrainSettingsValidationResult`](BrainSettingsValidationResult.md)
 
+Itself
+
 #### Defined in
 
-models/brainSettings.ts:25
+[models/brainSettings.ts:61](https://github.com/gethubai/brain-sdk/blob/eb59de1/src/models/brainSettings.ts#L61)
 
 ___
 
@@ -104,13 +116,17 @@ ___
 
 ▸ **getMessage**(): `string`
 
+Get all the error messages concatenated
+
 #### Returns
 
 `string`
 
+The error message
+
 #### Defined in
 
-models/brainSettings.ts:38
+[models/brainSettings.ts:83](https://github.com/gethubai/brain-sdk/blob/eb59de1/src/models/brainSettings.ts#L83)
 
 ___
 
@@ -118,16 +134,20 @@ ___
 
 ▸ `Static` **createError**(`error`): [`BrainSettingsValidationResult`](BrainSettingsValidationResult.md)
 
+Create a new validation result with an error
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `error` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `error` | `string` | The error message |
 
 #### Returns
 
 [`BrainSettingsValidationResult`](BrainSettingsValidationResult.md)
 
+The validation result
+
 #### Defined in
 
-models/brainSettings.ts:44
+[models/brainSettings.ts:94](https://github.com/gethubai/brain-sdk/blob/eb59de1/src/models/brainSettings.ts#L94)

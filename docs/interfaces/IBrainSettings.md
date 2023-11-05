@@ -1,6 +1,6 @@
-[@hubai/brain-sdk](../README.md) / [Exports](../modules.md) / IBrainSettings
-
 # Interface: IBrainSettings
+
+The basic settings of the brain
 
 ## Table of contents
 
@@ -17,9 +17,11 @@
 
 • **displayName**: `string`
 
+The Display name of the brain
+
 #### Defined in
 
-models/brainSettings.ts:10
+[models/brainSettings.ts:27](https://github.com/gethubai/brain-sdk/blob/eb59de1/src/models/brainSettings.ts#L27)
 
 ___
 
@@ -27,9 +29,11 @@ ___
 
 • **id**: `string`
 
+The unique id of the brain
+
 #### Defined in
 
-models/brainSettings.ts:8
+[models/brainSettings.ts:17](https://github.com/gethubai/brain-sdk/blob/eb59de1/src/models/brainSettings.ts#L17)
 
 ___
 
@@ -37,9 +41,11 @@ ___
 
 • **name**: `string`
 
+The name of the brain
+
 #### Defined in
 
-models/brainSettings.ts:9
+[models/brainSettings.ts:22](https://github.com/gethubai/brain-sdk/blob/eb59de1/src/models/brainSettings.ts#L22)
 
 ___
 
@@ -47,6 +53,8 @@ ___
 
 • **supportedPromptTypes**: [`PromptType`](../enums/PromptType.md)[]
 
+The list of prompts supported by this brain
+
 #### Defined in
 
-models/brainSettings.ts:11
+[models/brainSettings.ts:32](https://github.com/gethubai/brain-sdk/blob/eb59de1/src/models/brainSettings.ts#L32)

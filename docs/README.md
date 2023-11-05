@@ -1,1 +1,2 @@
-@hubai/brain-sdk / [Exports](modules.md)
+# brain-sdk
+Brain SDK for HubAI

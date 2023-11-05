@@ -1,6 +1,6 @@
-[@hubai/brain-sdk](../README.md) / [Exports](../modules.md) / PromptType
-
 # Enumeration: PromptType
+
+The type of prompt supported by the brain
 
 ## Table of contents
 
@@ -18,7 +18,7 @@
 
 #### Defined in
 
-models/brainSettings.ts:4
+[models/brainSettings.ts:7](https://github.com/gethubai/brain-sdk/blob/eb59de1/src/models/brainSettings.ts#L7)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-models/brainSettings.ts:3
+[models/brainSettings.ts:6](https://github.com/gethubai/brain-sdk/blob/eb59de1/src/models/brainSettings.ts#L6)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-models/brainSettings.ts:2
+[models/brainSettings.ts:5](https://github.com/gethubai/brain-sdk/blob/eb59de1/src/models/brainSettings.ts#L5)
